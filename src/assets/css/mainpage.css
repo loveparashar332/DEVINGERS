@@ -1,0 +1,95 @@
+#Clouds {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  /* height: 30%; */
+  overflow: hidden;
+  -webkit-animation: FadeIn 3s ease-out;
+          animation: FadeIn 3s ease-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+@-webkit-keyframes FadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes FadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes Float {
+  from {
+    -webkit-transform: translateX(100%) translateZ(0);
+            transform: translateX(100%) translateZ(0);
+  }
+  to {
+    -webkit-transform: translateX(-15%) translateZ(0);
+            transform: translateX(-15%) translateZ(0);
+  }
+}
+@keyframes Float {
+  from {
+    -webkit-transform: translateX(100%) translateZ(0);
+            transform: translateX(100%) translateZ(0);
+  }
+  to {
+    -webkit-transform: translateX(-15%) translateZ(0);
+            transform: translateX(-15%) translateZ(0);
+  }
+}
+/*
+@keyframes Float {
+  from { transform: translateX(100%) translateY(-100%) translateZ(0); }
+  50% { transform: translateX(55%) translateY(0) translateZ(0); }
+  to { transform: translateX(-5%) translateY(-100%) translateZ(0); }
+}
+*/
+@-webkit-keyframes FadeFloat {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  5%,
+  90% {
+    opacity: 1;
+  }
+}
+@keyframes FadeFloat {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  5%,
+  90% {
+    opacity: 1;
+  }
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+body {
+  color: #FFF;
+  background-color: #FFBDC3;
+  background-image: radial-gradient(circle, #ECD9E9 0%, #FFCFD7 70%, #FFBDC3 100%);
+}
