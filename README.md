@@ -32,7 +32,7 @@ Create a pull request mentioning the changes and upgrades that can be made to th
 #### Contributors 🐱‍💻
 - [Mayank Goyal](https://github.com/heromayank2)
 - [Pranjal Agrawal](https://github.com/pranjal1127)
-- [Akshra Gupta]()
+- [Akshra Gupta](https://github.com/akshrag)
 - [Omkar Deshmukh](https://github.com/h4ckom/)
 - [Divyansh Singh](https://github.com/brc-dd)
 - [Apurva Jain](https://github.com/apurvajain10)
