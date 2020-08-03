@@ -44,23 +44,30 @@ export default class Dashboard extends Component {
             <div class="col-lg-8 my-5">
               <h3>NARI: Ministry of Women and Child Development</h3>
               <h6>Your Network is Your Net Worth</h6>
-              <a href="">
+              <a href="#">
                 <p style={{ fontSize: "14px" }}>Change Language भाषा बदलो</p>
               </a>
             </div>
             <div class="col-lg-4 my-5" style={{ textAlign: "right" }}>
-              <h5>
-                <a href="/profile" title="My Profile">
-                  Akshra Gupta
-                </a>
-                <h6><a href="/logout">Logout</a></h6>
-              </h5>
+            <div class="dropdown">
+                <button data-letters="A" class="bg-transparent dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a data-letters="A" class="dropdown-item" href="#">Akshra Gupta</a>
+                  <p className='text-muted text-center' style={{fontSize:'0.8em'}}>Software engineer| IIIT kota</p>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Profile</a>
+                  <a class="dropdown-item" href="/login">LogOut</a>
+               </div>
+              </div>
+              
               <button
                 type="submit"
                 className="btn btn-sm btn-primary"
                 style={{ background: "#F4508D", border: "0px" }}
               >
-                <a href="/editor" style={{color:"white"}}>Write an Article ✍️</a>
+                <a href="/editor" className="btn btn-primary" style={{color:"white"}}>Write an Article  <span role='img' description='aria-label'>✍️</span> </a>
               </button>
             </div>
           </div>

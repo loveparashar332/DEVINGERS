@@ -90,6 +90,8 @@ body {
 }
 body {
   color: #FFF;
-  background-color: #FFBDC3;
-  background-image: radial-gradient(circle, #ECD9E9 0%, #FFCFD7 70%, #FFBDC3 100%);
+  background-color: #EA1E63;
+  background-image: radial-gradient(#EA1E63 0%, #f75389 74%);
+  background-attachment: fixed;
 }
+

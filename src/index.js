@@ -9,17 +9,21 @@ import Article from "./Components/Article"
 import MyEditor from "./Components/MyEditor"
 import Mainpage from './Components/Mainpage'
 import Safety from './Components/Safety';
+import NariChatbot from './Components/NariCharbot';
+import './assets/css/style.css'
 
 const routing = (
     <Router>
         <div>
-            <Route path="/home" component = {Mainpage} />
+            <Route exact path="/" component = {Mainpage} />
+            <Route  path="/" component = {NariChatbot} />
             <Route path="/login" component={Login} /> 
             <Route path="/register" component={Register} />
             <Route path="/dashboard" component={Dashboard} />
             <Route path="/safety" component={Safety}/>
             <Route path="/article" component={Article} />
             <Route path="/editor" component={MyEditor} />
+           
             
         </div>
     </Router>

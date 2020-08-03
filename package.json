@@ -31,8 +31,10 @@
     "react-multi-carousel": "^2.5.5",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.1",
+    "react-simple-chatbot": "^0.6.1",
     "react-twitter-embed": "^3.0.3",
     "socket.io": "^2.3.0",
+    "styled-components": "^5.1.1",
     "twilio": "^3.39.4"
   },
   "scripts": {

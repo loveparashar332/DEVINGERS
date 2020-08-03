@@ -17,7 +17,8 @@ export default class Mainpage extends Component {
                 <a href=""><p style={{fontSize:"14px"}}>Change Language भाषा बदलो</p></a>
             </div>
             <div class="col-lg-4 my-5" style={{textAlign:"right"}}>
-              <h5><a href="/login">Login</a> &nbsp; <a href="/register">Sign Up</a></h5>
+              <h5><a className="btn btn-outline-warning" href="/login">Login</a> &nbsp; 
+              <a className="btn btn-outline-danger" href="/register">Sign Up</a></h5>
               <TwitterFollowButton screenName={'ministrywcd'}/>
             </div>
           </div>

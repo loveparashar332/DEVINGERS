@@ -1,0 +1,7 @@
+POST http://localhost:5000/users/signin
+Content-type:application/json
+
+{    
+    "email":"2018kucp1127@iiitkota.ac.in",
+    "password":"123456"
+}

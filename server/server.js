@@ -1,6 +1,27 @@
-const express = require('express'); 
-const cors = require('cors');
+const express = require("express");
+const mongoose = require("mongoose");
+const cors = require("cors");
+const cookieParser = require("cookie-parser");
+const morgon = require("morgan");
 const twilio = require('twilio'); 
+
+
+mongoose.connect('mongodb+srv://local:1234@eclassroom-zhtyk.mongodb.net/nari?retryWrites=true&w=majority',{useNewUrlParser:true, useUnifiedTopology: true,})
+    .then(()=>console.log('mongoDB connected...'))
+    .catch(()=>console.log('error')); 
+
+const app = express();
+app.use(express.json()); 
+app.use(cookieParser());
+app.use(morgon())
+app.use(cors({
+    origin: "http://localhost:3000",
+    credentials: true
+  }));
+
+// Routes
+app.use("/users", require("./routes/users")); 
+app.use("/info", require("./routes/info")); 
 
 //twilio requirements -- Texting API 
 const accountSid = 'ACe72bb88c9ab9d070edc177f318563183';
@@ -16,6 +37,7 @@ app.use(cors()); //Blocks browser from restricting any data
 app.get('/', (req, res) => {
     res.send('Welcome to the Express Server')
 })
+
 
 //Twilio 
 app.get('/send-text', (req, res) => {

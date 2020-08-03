@@ -14,6 +14,7 @@ export default class Login extends Component {
     // save jwt token
   };
   render() {
+    // console.log(this.props.history.push('/dashboard') )
     return (
       <div>
         <div class="container">
@@ -77,7 +78,7 @@ export default class Login extends Component {
                   className="btn btn-primary"
                   style={{ background: "#F4508D", border: "0px" }}
                 >
-                  Submit
+                  <a href="/dashboard" className="btn btn-outline-primary">Submit</a>
                 </button>
               </form>
             </div>
