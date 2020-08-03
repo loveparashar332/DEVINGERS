@@ -1,7 +1,40 @@
 import React, { Component } from "react";
 import { TwitterTimelineEmbed, TwitterFollowButton } from "react-twitter-embed";
 import axios from "axios";
-import Map from "mapmyindia-react";
+import Map from "mapmyindia-react"; 
+import GoogleMapReact from 'google-map-react';
+// import Map from "./Map";
+
+const AnyReactComponent = ({ text }) => <div>{text}</div>;
+class SimpleMap extends Component {
+  static defaultProps = {
+    center: {
+      lat: 59.95,
+      lng: 30.33
+    },
+    zoom: 11
+  };
+ 
+  render() {
+    return (
+      // Important! Always set the container height explicitly
+      <div style={{ height: '100vh', width: '100%' }}>
+        <GoogleMapReact
+          bootstrapURLKeys={{ key: 'AIzaSyChM89_AuTn9M7jHHI2NvWMuBlpAMPyT2c' }}
+          defaultCenter={this.props.center}
+          defaultZoom={this.props.zoom}
+        >
+          <AnyReactComponent
+            lat={59.955413}
+            lng={30.337844}
+            text="My Marker"
+          />
+        </GoogleMapReact>
+      </div>
+    );
+  }
+}
+
 
 export default class Safety extends Component {
   state = {
@@ -42,7 +75,7 @@ export default class Safety extends Component {
     return (
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 my-5">
+          <div class="col-lg-9 my-5">
             <h3>NARI: Ministry of Women and Child Development</h3>
             <h6>Your Network is Your Net Worth</h6>
             <a href="">
@@ -52,15 +85,22 @@ export default class Safety extends Component {
             <p id="demo"></p>
           </div>
           
-          <div class="col-lg-4 my-5" style={{ textAlign: "right" }}>
-            <h5>
-              <a href="">Akshra Gupta</a>
-            </h5>
-            <h6><a href="/dashboard">Return to Dashboard</a></h6>
-            <TwitterFollowButton screenName={"ministrywcd"} />
-          </div>
-        </div>
+          <div class="dropdown col-lg-3 my-5 ">
+            <button  class="bg-transparent "><a className='badge badge-light' href="/dashboard"><i style={{fontSize:'2em', }} class="fa fa-home" aria-hidden="true"></i></a> </button>
+                <button data-letters="A" class="bg-transparent dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">  
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a data-letters="A" class="dropdown-item" href="#">Akshra Gupta</a>
+                  <p className='text-muted text-center' style={{fontSize:'0.8em'}}>Software engineer| IIIT kota</p>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Profile</a>
+                  <a class="dropdown-item" href="/login">LogOut</a>
+               </div>
+              </div></div>
+               
         <div className="row">
+          {/* <Map/> */}
+          {/* <SimpleMap/> */}
             <Map
               markers={[
                 {
@@ -78,6 +118,13 @@ export default class Safety extends Component {
             />
             <hr style={{ background: "#63A026", color: "#63A026" }} />
         </div>
+              <br/><br/><br/>
+      <div className="footer">
+        <div class="footer-copyright text-center">© 2020 Copyright:
+          <a href="https://github.com/heromayank2/AS119_DEVINGERS/"> Team Devingers</a>
+        </div>
+
+      </div>
       </div>
     );
   }

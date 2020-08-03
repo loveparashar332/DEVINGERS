@@ -31,3 +31,57 @@
       border-color: transparent;
       color: white;
     }
+    .footer{
+      background-color: #ff0055;
+      position: sticky;
+      bottom: 0;
+      width: 100%;
+    }
+     .footer-copyright{
+      position: absolute;
+      width: 100%;
+      color: #fff;
+      line-height: 40px;
+      font-size: 0.7em;
+      text-align: center;
+      bottom:0;
+     }
+
+
+     .App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+#map {
+  height: 100vh;
+}
+
+body,html{
+  height: 100%;
+  margin: 0;padding: 0;
+}

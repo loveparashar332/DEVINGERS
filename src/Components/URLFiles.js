@@ -16,7 +16,7 @@ export default {
   "Female Health":1 ,
   "Self defense":1 ,
   "Workshops":'workshops' ,
-  "Emergency":'/emergency' ,
+  "Emergency":'/safety' ,
  };
  
  
