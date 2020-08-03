@@ -31,8 +31,8 @@ Create a pull request mentioning the changes and upgrades that can be made to th
 
 #### Contributors 🐱‍💻
 - [Mayank Goyal](https://github.com/heromayank2)
-- [Pranjal Agrawal]()
+- [Pranjal Agrawal](https://github.com/pranjal1127)
 - [Akshra Gupta]()
-- [Omkar Deshmukh]()
-- [Divyansh Singh]()
-- [Apurva Jain]()
+- [Omkar Deshmukh](https://github.com/H4ckOm)
+- [Divyansh Singh](https://github.com/brc-dd)
+- [Apurva Jain](https://github.com/Apurvajain10)
