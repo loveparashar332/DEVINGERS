@@ -11,6 +11,7 @@ import Mainpage from './Components/Mainpage'
 import Safety from './Components/Safety';
 import NariChatbot from './Components/NariCharbot';
 import './assets/css/style.css'
+import ArticleList from './Components/ArticleList';
 
 const routing = (
     <Router>
@@ -21,6 +22,7 @@ const routing = (
             <Route path="/register" component={Register} />
             <Route path="/dashboard" component={Dashboard} />
             <Route path="/safety" component={Safety}/>
+            <Route path="/articlelist/cooking" component={ArticleList} />
             <Route path="/article" component={Article} />
             <Route path="/editor" component={MyEditor} />
            

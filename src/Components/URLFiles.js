@@ -1,7 +1,7 @@
 export default {
   "Health":"/health" ,
   "Cultural Events":'/cultural',
-  "Recipes":'/recipes' ,
+  "Recipes":'/articlelist/cooking' ,
   "Religion":1 ,
   "Technology":1 ,
   "Apply for Moderator":1 ,
