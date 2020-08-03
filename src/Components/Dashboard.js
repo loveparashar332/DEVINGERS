@@ -36,6 +36,7 @@ export default class Dashboard extends Component {
     });
     alert('Response Saved! Thank you for submitting your response 🦄.')
   }
+  
   render() {
     return (
       <div>
@@ -50,11 +51,11 @@ export default class Dashboard extends Component {
             </div>
             <div class="col-lg-4 my-5" style={{ textAlign: "right" }}>
             <div class="dropdown">
-                <button data-letters="A" class="bg-transparent dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button data-letters="AG" class="bg-transparent dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a data-letters="A" class="dropdown-item" href="#">Akshra Gupta</a>
+                  <a data-letters="AG" class="dropdown-item" href="#">Akshra Gupta</a>
                   <p className='text-muted text-center' style={{fontSize:'0.8em'}}>Software engineer| IIIT kota</p>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#">Profile</a>
@@ -67,7 +68,7 @@ export default class Dashboard extends Component {
                 className="btn btn-sm btn-primary"
                 style={{ background: "#F4508D", border: "0px" }}
               >
-                <a href="/editor" className="btn btn-primary" style={{color:"white"}}>Write an Article  <span role='img' description='aria-label'>✍️</span> </a>
+                <a href="/editor" className="btn btn-primary btn-sm" style={{color:"white"}}>Write an Article  <span role='img' description='aria-label'>✍️</span> </a>
               </button>
             </div>
           </div>
@@ -109,7 +110,7 @@ export default class Dashboard extends Component {
             details. Below are some nearby landmarks.
             <br></br>
             <div class="row my-2 mx-1">
-              <table class="table table-bordered">
+              <table class="table table-bordered" style={{color:"white"}}>
                 <thead>
                   <tr>
                     <th scope="col">Type</th>
@@ -123,26 +124,27 @@ export default class Dashboard extends Component {
                 <tbody>
                   <tr>
                     <th scope="row">Name</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <td>Meera Chowk Police Station</td>
+                    <td>Giri Hospital</td>
+                    <td>Adarsh Park</td>
+                    <td>Marky Momos</td>
+                    <td>Hotel Grand Canyon</td>
                   </tr>
                   <tr>
                     <th scope="row">Phone Number</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
+                    <td><a href="tel:+91-9367262527">9367262527</a></td>
+                    <td><a href="tel:+91-8527623732">8527623732</a></td>
+                    <td><a href="tel:+91-9273489222">9273489222</a></td>
+                    <td><a href="tel:+91-8700087000">8700087000</a></td>
+                    <td><a href="tel:+91-7834578438">7834578438</a></td>
                   </tr>
                   <tr>
                     <th scope="row">Location</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                    <td>@twitter</td>
-                    <td>@twitter</td>
+                    <td><a href="https://goo.gl/maps/KgBwLdoqQVGCJ9mt7">Location Here</a></td>
+                    <td><a href="https://goo.gl/maps/KgBwLdoqQVGCJ9mt7">Location Here</a></td>
+                    <td><a href="https://goo.gl/maps/KgBwLdoqQVGCJ9mt7">Location Here</a></td>
+                    <td><a href="https://goo.gl/maps/KgBwLdoqQVGCJ9mt7">Location Here</a></td>
+                    <td><a href="https://goo.gl/maps/KgBwLdoqQVGCJ9mt7">Location Here</a></td>
                   </tr>
                 </tbody>
               </table>
@@ -165,7 +167,19 @@ export default class Dashboard extends Component {
                   class="form-control"
                   id="tagsearch"
                   name="tagsearch"
+                  list="browsers"
                 ></input>
+                <datalist id="browsers">
+                <option value="Defense and Training"/>
+                <option value="Career Option"/>
+                <option value="Parenting"/>
+                <option value="Societal Pressure"/>
+                <option value="BMI"/>
+                <option value="Home Decor"/>
+                <option value="Moderator"/>
+                <option value="Diet"/>
+                <option value="Cooking"/>
+              </datalist>
               </div>
               <h5>Defense and Training</h5>
               <Carousel
@@ -190,9 +204,9 @@ export default class Dashboard extends Component {
                 <img src={require('../assets/images/def1.jpg')} class="card-img-top" alt="..." style={{height:"200px"}}/>
                 <div class="card-body">
                   <h5 class="card-title" style={{color:"pink"}}>Learn Judo in 15 days</h5>
-                  <p class="card-text" style={{color:"pink"}}>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text" style={{color:"pink"}}>Is 15/16 not too late to start practising judo (to compete in more serious competitions later)?</p>
                   <button type="submit" className="btn btn-sm btn-primary" style={{ background: "#F4508D", border: "0px" }}>
-                  <a href="/editor" style={{color:"white"}}>Read More ✍️</a>
+                  <a href="/article/343782238" style={{color:"white"}}>Read More ✍️</a>
                   </button>
                 </div>
                 </div>
@@ -200,19 +214,19 @@ export default class Dashboard extends Component {
                 <img src={require('../assets/images/def2.jpg')} class="card-img-top" alt="..." style={{height:"200px"}}/>
                 <div class="card-body">
                 <h5 class="card-title" style={{color:"pink"}}>Prepare for Indian Army Exam</h5>
-                  <p class="card-text" style={{color:"pink"}}>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text" style={{color:"pink"}}>In this article, you can find the details on these Indian army entries and exams and how one can preparing these...</p>
                   <button type="submit" className="btn btn-sm btn-primary" style={{ background: "#F4508D", border: "0px" }}>
-                  <a href="/editor" style={{color:"white"}}>Read More ✍️</a>
+                  <a href="/article/375347838" style={{color:"white"}}>Read More ✍️</a>
                   </button>
                 </div>
                 </div>
                 <div class="card" style={{width: "22rem"}}>
                 <img src={require('../assets/images/def3.jpg')} class="card-img-top" alt="..." style={{height:"200px"}}/>
                 <div class="card-body">
-                <h5 class="card-title" style={{color:"pink"}}>How to start with Ninjutsu</h5>
-                  <p class="card-text" style={{color:"pink"}}>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h5 class="card-title" style={{color:"pink"}}>How to start with Taijutsu</h5>
+                  <p class="card-text" style={{color:"pink"}}>Taijutsu is a Japanese blanket term for any combat skill, technique or system of martial art using body movements...</p>
                   <button type="submit" className="btn btn-sm btn-primary" style={{ background: "#F4508D", border: "0px" }}>
-                  <a href="/editor" style={{color:"white"}}>Read More ✍️</a>
+                  <a href="/article/384732233" style={{color:"white"}}>Read More ✍️</a>
                   </button>
                 </div>
                 </div>
@@ -220,9 +234,9 @@ export default class Dashboard extends Component {
                 <img src={require('../assets/images/def4.jpg')} class="card-img-top" alt="..." style={{height:"200px"}}/>
                 <div class="card-body">
                 <h5 class="card-title" style={{color:"pink"}}>Start Local Defense Community</h5>
-                  <p class="card-text" style={{color:"pink"}}>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text" style={{color:"pink"}}>Defence families are strongest when they are connected with their local communities. We provide a number of support..</p>
                   <button type="submit" className="btn btn-sm btn-primary" style={{ background: "#F4508D", border: "0px" }}>
-                  <a href="/editor" style={{color:"white"}}>Read More ✍️</a>
+                  <a href="/article/387323892" style={{color:"white"}}>Read More ✍️</a>
                   </button>
                 </div>
                 </div>

@@ -52,15 +52,8 @@ export default class MyEditor extends Component {
       },
     });
 
-    function handleSave(event) {
-      editor
-        .save()
-        .then((outputData) => {
-          console.log("Article Data: ", outputData);
-        })
-        .catch((error) => {
-          console.log("Saving Failed ", error);
-        });
+    function handleSave() {
+      alert('Your Article Has been submitted for Evaluation')
     }
 
     return (
@@ -99,13 +92,15 @@ export default class MyEditor extends Component {
             borderRadius: "5px",
           }}
         ></div>
+        <a href="/dashboard">
         <button
           className="btn btn-success my-3 btn-sm"
           style={{ background: "#F4508D", border: "0px" }}
           onClick={handleSave}
         >
-          Save Article
+        Save Article
         </button>
+        </a>
       </div>
     );
   }

@@ -16,7 +16,6 @@ let config = {
 
 const theme = {
   background: '#f5f8fb',
-  fontFamily: 'Helvetica Neue',
   headerBgColor: '#EA1E63',
   headerFontColor: '#fff',
   headerFontSize: '15px',
